@@ -1,0 +1,2354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RRR Digital Agency - Professional digital marketing services in Lahan, Siraha, Nepal. Social media marketing, video editing, Facebook promotion, and business advertisement services.">
+    <meta name="keywords" content="Digital Marketing Lahan, Social Media Marketing Siraha, Facebook Promotion Lahan, Instagram Marketing Nepal, Business Promotion Lahan, Video Editing, Instagram Reels, Digital Marketing Agency">
+    <meta name="author" content="Ranjan Kushwaha">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="RRR Digital Agency - Grow Your Business">
+    <meta property="og:description" content="Professional digital marketing services for local businesses in Lahan, Siraha, Nepal">
+    <meta property="og:type" content="website">
+    <title>RRR Digital Agency | Social Media & Video Editing Services | Lahan, Nepal</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- EmailJS -->
+
+    
+    <style>
+        :root {
+            --primary-blue: #0066FF;
+            --primary-blue-dark: #0052CC;
+            --primary-orange: #FF6B35;
+            --primary-orange-light: #FF8F66;
+            --dark-bg: #0a0a0f;
+            --dark-bg-secondary: #12121a;
+            --dark-card: #1a1a25;
+            --dark-card-hover: #252535;
+            --text-white: #ffffff;
+            --text-gray: #a0a0b0;
+            --text-light-gray: #6b6b7b;
+            --gradient-blue: linear-gradient(135deg, #0066FF 0%, #00CCFF 100%);
+            --gradient-orange: linear-gradient(135deg, #FF6B35 0%, #FFAA00 100%);
+            --gradient-dark: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-white);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark-bg-secondary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-blue);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-orange);
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+
+        .navbar.scrolled {
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 2px 30px rgba(0, 102, 255, 0.1);
+            padding: 10px 5%;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-text {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-orange) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-orange) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 20px;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-orange);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-orange);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--text-white);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 100px 5% 50px;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(0, 102, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(255, 107, 53, 0.15) 0%, transparent 50%),
+                var(--dark-bg);
+            z-index: -2;
+        }
+
+        .hero-gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, 
+                rgba(0, 102, 255, 0.1) 0%, 
+                transparent 25%, 
+                rgba(255, 107, 53, 0.1) 50%, 
+                transparent 75%, 
+                rgba(0, 102, 255, 0.1) 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            z-index: -1;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating Shapes */
+        .floating-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .shape {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .shape-1 {
+            top: 10%;
+            left: 10%;
+            width: 100px;
+            height: 100px;
+            background: var(--primary-blue);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            animation-delay: 0s;
+        }
+
+        .shape-2 {
+            top: 60%;
+            right: 10%;
+            width: 150px;
+            height: 150px;
+            background: var(--primary-orange);
+            border-radius: 50%;
+            animation-delay: -5s;
+        }
+
+        .shape-3 {
+            bottom: 20%;
+            left: 20%;
+            width: 80px;
+            height: 80px;
+            background: var(--primary-blue);
+            transform: rotate(45deg);
+            animation-delay: -10s;
+        }
+
+        .shape-4 {
+            top: 30%;
+            right: 30%;
+            width: 60px;
+            height: 60px;
+            background: var(--primary-orange);
+            border-radius: 50%;
+            animation-delay: -15s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+                transform: translate(20px, -30px) rotate(90deg);
+            }
+            50% {
+                transform: translate(-10px, 20px) rotate(180deg);
+            }
+            75% {
+                transform: translate(30px, 10px) rotate(270deg);
+            }
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(0, 102, 255, 0.1);
+            border: 1px solid rgba(0, 102, 255, 0.3);
+            border-radius: 50px;
+            font-size: 14px;
+            color: var(--primary-blue);
+            margin-bottom: 25px;
+            animation: fadeInUp 0.8s ease forwards;
+            opacity: 0;
+        }
+
+        .hero h1 {
+            font-size: clamp(35px, 6vw, 65px);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+            opacity: 0;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-orange) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: clamp(16px, 2vw, 20px);
+            color: var(--text-gray);
+            margin-bottom: 40px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+            opacity: 0;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.6s forwards;
+            opacity: 0;
+        }
+
+        .btn {
+            padding: 16px 35px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+            color: white;
+            box-shadow: 0 10px 30px rgba(0, 102, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 102, 255, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid var(--primary-orange);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-orange);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.3);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Section Styles */
+        section {
+            padding: 100px 5%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(255, 107, 53, 0.1);
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            border-radius: 50px;
+            font-size: 14px;
+            color: var(--primary-orange);
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .section-title {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Services Section */
+        .services {
+            background: var(--dark-bg-secondary);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--dark-card);
+            border-radius: 20px;
+            padding: 40px 30px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid transparent;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-orange));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            background: var(--dark-card-hover);
+            border-color: rgba(0, 102, 255, 0.2);
+            box-shadow: 0 20px 50px rgba(0, 102, 255, 0.1);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.2) 0%, rgba(255, 107, 53, 0.2) 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: var(--primary-blue);
+            margin-bottom: 25px;
+            transition: all 0.4s ease;
+        }
+
+        .service-card:hover .service-icon {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-orange) 100%);
+            color: white;
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .service-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .service-description {
+            color: var(--text-gray);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            background: var(--dark-bg);
+        }
+
+        .portfolio-slider {
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .portfolio-track {
+            display: flex;
+            gap: 30px;
+            transition: transform 0.5s ease;
+        }
+
+        .portfolio-item {
+            min-width: 350px;
+            flex: 0 0 calc(33.333% - 20px);
+            background: var(--dark-card);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 50px rgba(0, 102, 255, 0.15);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .portfolio-image svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        /* Specific mockup classes for better styling */
+        .social-post-mock { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .reel-mock { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); }
+        .festival-mock { background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); }
+        .ad-mock { background: linear-gradient(135deg, #1877F2 0%, #4267B2 100%); }
+        .website-mock { background: linear-gradient(135deg, #1a1a2e 0%, #2d3436 100%); }
+        .logo-mock { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); }
+
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-info h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .portfolio-info p {
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+
+        .portfolio-slider-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        /* Blog Section */
+        .blog {
+            background: var(--dark-bg-secondary);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .blog-card {
+            background: var(--dark-card);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,102,255,0.2);
+        }
+
+        .blog-card:nth-child(1) {
+            background: linear-gradient(135deg, rgba(0,102,255,0.1), rgba(255,107,53,0.1));
+            border-color: rgba(0,102,255,0.3);
+        }
+
+        .blog-image {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--text-white);
+        }
+
+        .blog-content p, .blog-content ul {
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+        }
+
+        .blog-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .blog-content ul li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .blog-content ul li:last-child {
+            border-bottom: none;
+        }
+
+        .blog-link {
+            color: var(--primary-blue);
+            font-weight: 500;
+            align-self: flex-start;
+        }
+
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .slider-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--dark-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slider-btn:hover {
+            background: var(--primary-blue);
+            border-color: var(--primary-blue);
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-us {
+            background: var(--dark-bg-secondary);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: var(--dark-card);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(255, 107, 53, 0.1);
+        }
+
+        .feature-number {
+            font-size: 60px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-orange) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            color: var(--primary-orange);
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .feature-description {
+            color: var(--text-gray);
+            font-size: 15px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: var(--dark-bg);
+        }
+
+        .testimonials-slider {
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .testimonials-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .testimonial-card {
+            min-width: 100%;
+            padding: 0 20px;
+        }
+
+        .testimonial-content {
+            background: var(--dark-card);
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+            position: relative;
+        }
+
+        .testimonial-quote {
+            position: absolute;
+            top: 30px;
+            left: 50px;
+            font-size: 80px;
+            color: rgba(0, 102, 255, 0.2);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            font-size: 20px;
+            line-height: 1.8;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-orange) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .author-info h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+
+        .testimonials-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--dark-card);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: var(--primary-blue);
+            width: 30px;
+            border-radius: 6px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--dark-bg-secondary);
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .contact-info {
+            padding-right: 30px;
+        }
+
+        .contact-info h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            color: var(--text-gray);
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .contact-details {
+            list-style: none;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: var(--dark-card);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: var(--dark-card-hover);
+            transform: translateX(10px);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-orange) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .contact-text h4 {
+            font-size: 16px;
+            margin-bottom: 3px;
+        }
+
+        .contact-text p {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin: 0;
+            padding: 0;
+        }
+
+        .contact-form {
+            background: var(--dark-card);
+            border-radius: 20px;
+            padding: 40px;
+        }
+
+        .form-title {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px 20px;
+            background: var(--dark-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 20px rgba(0, 102, 255, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-orange) 100%);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 102, 255, 0.3);
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #25D366;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-float i {
+            font-size: 24px;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            padding: 50px 5% 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-orange) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-brand p {
+            color: var(--text-gray);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .footer-links h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-gray);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-orange);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: var(--dark-card);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--primary-blue);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        /* Scroll Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 992px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-content {
+                padding: 0 20px;
+            }
+
+            .portfolio-item {
+                min-width: 100%;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                padding-right: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 5%;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+
+            .testimonial-content {
+                padding: 30px 20px;
+            }
+
+            .testimonial-text {
+                font-size: 16px;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                padding: 12px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 22px;
+            }
+
+            .logo-icon {
+                width: 35px;
+                height: 35px;
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .service-card {
+                padding: 30px 20px;
+            }
+
+            .contact-form {
+                padding: 25px 20px;
+            }
+        }
+
+        /* Mobile Menu Overlay */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 10, 15, 0.98);
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-menu a:hover {
+            color: var(--primary-orange);
+        }
+
+        .mobile-close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+        }
+
+        /* AI Agent Chat Styles */
+        .ai-chat-btn {
+            position: fixed;
+            bottom: 90px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #8B5CF6, #06B6D4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1001;
+            animation: aiPulse 2s infinite;
+            border: none;
+        }
+
+        .ai-chat-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(139, 92, 246, 0.6);
+        }
+
+        @keyframes aiPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .ai-chat-modal {
+            position: fixed;
+            bottom: 170px;
+            right: 30px;
+            width: 350px;
+            height: 500px;
+            background: rgba(26, 26, 37, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            z-index: 1002;
+            transform: scale(0.7) translateY(20px);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .ai-chat-modal.active {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+        }
+
+        .ai-chat-header {
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(6, 182, 212, 0.2));
+            border-radius: 20px 20px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .ai-avatar {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #8B5CF6, #06B6D4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .ai-name {
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .ai-close {
+            margin-left: auto;
+            font-size: 20px;
+            cursor: pointer;
+            color: var(--text-gray);
+            transition: color 0.3s;
+        }
+
+        .ai-close:hover {
+            color: white;
+        }
+
+        .ai-chat-messages {
+            padding: 20px;
+            height: 320px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 12px 16px;
+            border-radius: 18px;
+            line-height: 1.4;
+            animation: messageSlide 0.3s ease;
+        }
+
+        .message.user {
+            align-self: flex-end;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+            color: white;
+        }
+
+        .message.ai {
+            align-self: flex-start;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .ai-typing {
+            align-self: flex-start;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 18px;
+            padding: 12px 16px;
+            max-width: 80%;
+        }
+
+        .typing-dots {
+            display: flex;
+            gap: 4px;
+        }
+
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--text-gray);
+            border-radius: 50%;
+            animation: typing 1.4s infinite;
+        }
+
+        .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+        .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes typing {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-10px); }
+        }
+
+        @keyframes messageSlide {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .ai-chat-input {
+            padding: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .ai-input-field {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 12px 20px;
+            color: white;
+            outline: none;
+            font-family: inherit;
+        }
+
+        .ai-input-field::placeholder {
+            color: var(--text-gray);
+        }
+
+        .ai-send-btn {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+            border: none;
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .ai-send-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .ai-chat-messages::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .ai-chat-messages::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .ai-chat-messages::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .ai-chat-modal {
+                width: calc(100vw - 60px);
+                right: 30px;
+                bottom: 100px;
+                height: 450px;
+            }
+
+            .ai-chat-btn {
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head> 
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+<a href="rklogo.png" class="logo">
+            <img src="rklogo.png" alt="RRR Digital Agency Logo" style="height: 50px; border-radius: 10px;">
+        </a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#why-choose-us">Why Choose Us</a></li>
+<li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-close" id="mobileClose">
+            <i class="fas fa-times"></i>
+        </div>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#why-choose-us">Why Choose Us</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background"></div>
+        <div class="hero-gradient"></div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-rocket"></i> Professional Digital Marketing Agency
+            </div>
+            <h1>Grow Your Business with <span>Powerful Digital Marketing</span></h1>
+            <p>We help local businesses grow with social media marketing, reels, Website Design & Development and Hosting & Maintenance services and professional digital promotion.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-gift"></i> Get Free Sample Post
+                </a>
+                <a href="https://wa.me/9779815298144" class="btn btn-secondary" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Contact on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-header reveal">
+            <span class="section-tag">Our Services</span>
+            <h2 class="section-title">Digital Marketing Services</h2>
+            <p class="section-subtitle">We offer comprehensive digital marketing solutions tailored to grow your business.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card reveal">
+                <div class="service-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3 class="service-title">Social Media Post Design</h3>
+                <p class="service-description">Eye-catching, engaging social media posts designed to capture attention and boost engagement for your brand.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <h3 class="service-title">Instagram Reel / Short Video Editing</h3>
+                <p class="service-description">Professional video editing for Instagram Reels, YouTube Shorts, and TikTok to maximize your reach.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">
+                    <i class="fab fa-facebook"></i>
+                </div>
+                <h3 class="service-title">Facebook Page Promotion</h3>
+                <p class="service-description">Complete Facebook page management and promotion to increase followers, engagement, and brand visibility.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <h3 class="service-title">Business Advertisement</h3>
+                <p class="service-description">Strategic ad campaigns across platforms to target your ideal audience and drive quality leads.</p>
+            </div>
+<div class="service-card reveal">
+                <div class="service-icon">
+                    <i class="fas fa-calendar-star"></i>
+                </div>
+                <h3 class="service-title">Festival & Offer Posters</h3>
+                <p class="service-description">Creative festival posters and promotional designs for offers, discounts, and special occasions.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3 class="service-title">Website Design & Development</h3>
+                <p class="service-description">Professional website design, development, hosting, and management services for businesses of all sizes.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3 class="service-title">Website Hosting & Maintenance</h3>
+                <p class="service-description">Reliable web hosting, domain management, and regular maintenance to keep your website running smoothly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="section-header reveal">
+            <span class="section-tag">Our Work</span>
+            <h2 class="section-title">Portfolio</h2>
+            <p class="section-subtitle">Check out some of our recent projects and creative work.</p>
+        </div>
+        <div class="portfolio-slider reveal">
+<div class="portfolio-track" id="portfolioTrack">
+                <!-- Social Media Post Design -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image social-post-mock">
+                        <svg viewBox="0 0 350 250" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="20" y="20" width="310" height="210" rx="20" fill="linear-gradient(135deg, #667eea 0%, #764ba2 100%)"/>
+                            <rect x="40" y="50" width="270" height="100" rx="15" fill="white" opacity="0.9"/>
+                            <text x="60" y="90" font-family="Poppins, sans-serif" font-size="24" font-weight="700" fill="#333">🎉 FLASH SALE! 🎉</text>
+                            <text x="60" y="120" font-family="Poppins, sans-serif" font-size="16" fill="#666">50% OFF All Services</text>
+                            <text x="60" y="150" font-family="Poppins, sans-serif" font-size="14" fill="#FF6B35">Limited Time Only!</text>
+                            <circle cx="280" cy="80" r="35" fill="#FF6B35"/>
+                            <text x="265" y="85" font-size="28" fill="white" font-weight="bold">50%</text>
+                        </svg>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h4>Social Media Post</h4>
+                                <p>Instagram Promotion</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Reel Thumbnail -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image reel-mock">
+                        <svg viewBox="0 0 350 250" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" width="350" height="250" rx="15" fill="#1a1a2e"/>
+                            <rect x="20" y="30" width="310" height="190" rx="10" fill="linear-gradient(45deg, #FF6B35, #F7931E)"/>
+                            <circle cx="175" cy="105" r="60" fill="white"/>
+                            <circle cx="175" cy="105" r="45" fill="#0066FF"/>
+                            <rect x="40" y="200" width="270" height="35" rx="8" fill="rgba(255,255,255,0.9)"/>
+                            <text x="50" y="220" font-size="16" font-weight="600" fill="#333">👇 Watch Full Reel 👇</text>
+                            <text x="175" y="245" font-size="12" fill="#666" text-anchor="middle">0:15 • RK Digital</text>
+                        </svg>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h4>Instagram Reel</h4>
+                                <p>Product Showcase Video</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Festival Poster -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image festival-mock">
+                        <svg viewBox="0 0 350 250" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <radialGradient id="dashainGrad" cx="50%" cy="50%">
+                                    <stop offset="0%" stop-color="#FF6B35"/>
+                                    <stop offset="70%" stop-color="#F7931E"/>
+                                    <stop offset="100%" stop-color="#D63031"/>
+                                </radialGradient>
+                            </defs>
+                            <rect x="0" y="0" width="350" height="250" rx="25" fill="url(#dashainGrad)"/>
+                            <circle cx="50" cy="50" r="40" fill="white" opacity="0.3"/>
+                            <circle cx="300" cy="50" r="35" fill="white" opacity="0.3"/>
+                            <circle cx="50" cy="200" r="30" fill="white" opacity="0.3"/>
+                            <circle cx="300" cy="200" r="25" fill="white" opacity="0.3"/>
+                            <text x="175" y="80" font-size="28" font-weight="800" fill="white" text-anchor="middle" font-family="Poppins">DASHAIN</text>
+                            <text x="175" y="110" font-size="20" font-weight="700" fill="white" text-anchor="middle">OFFERS</text>
+                            <rect x="60" y="130" width="230" height="80" rx="15" fill="white" opacity="0.95"/>
+                            <text x="175" y="155" font-size="18" font-weight="700" fill="#D63031" text-anchor="middle">Buy 1 Get 1 FREE</text>
+                            <text x="175" y="175" font-size="14" fill="#666" text-anchor="middle">Video Editing Package</text>
+                            <text x="175" y="195" font-size="16" font-weight="700" fill="#FF6B35" text-anchor="middle">Only Today!</text>
+                        </svg>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h4>Festival Poster</h4>
+                                <p>Dashain Promotion</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Facebook Ad -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image ad-mock">
+                        <svg viewBox="0 0 350 250" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" width="350" height="250" rx="20" fill="#1877F2"/>
+                            <rect x="25" y="25" width="300" height="200" rx="15" fill="white"/>
+                            <rect x="40" y="50" width="270" height="60" rx="10" fill="#FF6B35"/>
+                            <text x="60" y="85" font-size="22" font-weight="700" fill="white">New Restaurant Opening!</text>
+                            <text x="60" y="105" font-size="15" fill="white">Special Opening Offer</text>
+                            <rect x="40" y="130" width="270" height="60" rx="10" fill="rgba(255,255,255,0.1)"/>
+                            <circle cx="70" cy="160" r="25" fill="#0066FF"/>
+                            <path d="M65 148 L75 155 L65 162 Z" fill="#fff"/>
+                            <text x="115" y="155" font-size="18" font-weight="600" fill="white">Opening 15 Oct</text>
+                            <rect x="40" y="210" width="270" height="25" rx="8" fill="rgba(255,255,255,0.9)"/>
+                            <text x="50" y="227" font-size="14" fill="#333">👉 Book Your Table Now 👉</text>
+                        </svg>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h4>Facebook Ad</h4>
+                                <p>Restaurant Promotion</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Website Mockup -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image website-mock">
+                        <svg viewBox="0 0 350 250" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="15" y="15" width="320" height="220" rx="20" fill="#1a1a2e"/>
+                            <rect x="35" y="35" width="280" height="60" rx="10" fill="linear-gradient(135deg, #0066FF, #FF6B35)"/>
+                            <text x="175" y="65" font-size="20" font-weight="700" fill="white" text-anchor="middle">Local Shop Lahan</text>
+                            <rect x="35" y="110" width="280" height="120" rx="10" fill="white"/>
+                            <rect x="50" y="125" width="90" height="80" rx="8" fill="#f0f0f0"/>
+                            <rect x="50" y="135" width="70" height="20" rx="5" fill="#ddd"/>
+                            <rect x="50" y="165" width="70" height="20" rx="5" fill="#FF6B35" stroke="white" stroke-width="2"/>
+                            <rect x="155" y="125" width="90" height="80" rx="8" fill="#f8f9fa"/>
+                            <text x="200" y="145" font-size="14" fill="#666" text-anchor="middle">Services</text>
+                            <text x="200" y="165" font-size="12" fill="#0066FF" text-anchor="middle">Social Media</text>
+                            <rect x="260" y="125" width="45" height="80" rx="8" fill="#e9ecef"/>
+                            <circle cx="282" cy="155" r="20" fill="#FF6B35"/>
+                            <rect x="35" y="245" width="280" height="25" rx="8" fill="#343a40" opacity="0.8"/>
+                            <text x="175" y="260" font-size="12" fill="white" text-anchor="middle">© 2024 RK Digital | Lahan, Nepal</text>
+                        </svg>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h4>Website Design</h4>
+                                <p>E-commerce Landing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Logo Design -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image logo-mock">
+                        <svg viewBox="0 0 350 250" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="50" y="50" width="250" height="150" rx="25" fill="#f8f9fa"/>
+                            <circle cx="175" cy="125" r="70" fill="none" stroke="#0066FF" stroke-width="8" stroke-linecap="round"/>
+                            <circle cx="175" cy="125" r="45" fill="none" stroke="#FF6B35" stroke-width="6" stroke-linecap="round"/>
+                            <path d="M155 105 L175 125 L155 145 M195 105 L175 125 L195 145" stroke="#0066FF" stroke-width="6" stroke-linecap="round"/>
+                            <text x="175" y="190" font-size="24" font-weight="800" fill="#333" text-anchor="middle" font-family="Poppins">Your Logo</text>
+                            <text x="175" y="215" font-size="14" fill="#666" text-anchor="middle">Brand Identity Design</text>
+                            <rect x="75" y="70" width="40" height="30" rx="5" fill="#e9ecef"/>
+                            <rect x="235" y="70" width="35" height="25" rx="4" fill="#e9ecef"/>
+                            <rect x="75" y="160" width="30" height="25" rx="4" fill="#e9ecef"/>
+                            <rect x="245" y="155" width="25" height="20" rx="3" fill="#e9ecef"/>
+                        </svg>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h4>Logo & Branding</h4>
+                                <p>Complete Identity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-slider-nav">
+                <button class="slider-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog" id="blog">
+        <div class="section-header reveal">
+            <span class="section-tag">Latest Posts</span>
+            <h2 class="section-title">Daily Blog Updates</h2>
+            <p class="section-subtitle">Fresh digital marketing tips and strategies every day for Lahan businesses.</p>
+        </div>
+        <div class="blog-grid">
+<a href="blogs.html" class="blog-card reveal">
+                <div class="blog-image">
+                    <i class="fas fa-newspaper"></i>
+                </div>
+                <div class="blog-content">
+                    <h3>Latest Blog Posts</h3>
+                    <p>Instagram strategies, Reels tutorials, Facebook ads, festival posters, websites & logos</p>
+                    <span class="blog-link">Read Blog →</span>
+                </div>
+            </a>
+                <div class="blog-image">
+                    <i class="fas fa-blog"></i>
+                </div>
+                <div class="blog-content">
+                    <h3>Daily Digital Marketing Tips</h3>
+                    <p>New strategies, Instagram reels tutorials, Facebook ads guide for local businesses. Updated daily!</p>
+                    <span class="blog-link">View All Posts →</span>
+                </div>
+            </a>
+            <div class="blog-card reveal">
+                <div class="blog-image">
+                    <i class="fas fa-calendar-day"></i>
+                </div>
+                <div class="blog-content">
+                    <h3>Recent Articles</h3>
+                    <ul>
+                        <li>5 Instagram Post Ideas</li>
+                        <li>Facebook Ads Rs 500 Budget</li>
+                        <li>Dashain Poster Templates</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us" id="why-choose-us">
+        <div class="section-header reveal">
+            <span class="section-tag">Why Choose Us</span>
+            <h2 class="section-title">Why Choose RK Digital?</h2>
+            <p class="section-subtitle">We're committed to delivering exceptional results for your business.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card reveal">
+                <div class="feature-number" data-target="100">0</div>
+                <div class="feature-icon">+</div>
+                <h3 class="feature-title">Designs Created</h3>
+                <p class="feature-description">Over 100 stunning designs delivered to satisfied clients across various industries.</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-number" data-target="24" data-suffix="hrs">0</div>
+                <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                <h3 class="feature-title">Fast Delivery</h3>
+                <p class="feature-description">Quick turnaround times ensuring your projects are delivered on schedule.</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-number" data-target="100" data-prefix="$">0</div>
+                <div class="feature-icon"><i class="fas fa-percentage"></i></div>
+                <h3 class="feature-title">Affordable Pricing</h3>
+                <p class="feature-description">Premium quality services at competitive prices that fit your budget.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-header reveal">
+            <span class="section-tag">Testimonials</span>
+            <h2 class="section-title">What Our Clients Say</h2>
+            <p class="section-subtitle">Hear from our satisfied clients about their experience with us.</p>
+        </div>
+        <div class="testimonials-slider reveal">
+            <div class="testimonials-track" id="testimonialsTrack">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <span class="testimonial-quote">"</span>
+                        <p class="testimonial-text">RK Digital transformed our social media presence completely. Our engagement has increased by 300% and we're getting new customers every day!</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">P</div>
+                            <div class="author-info">
+                                <h4>Praveen Kumar</h4>
+                                <p>Business Owner, Lahan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <span class="testimonial-quote">"</span>
+                        <p class="testimonial-text">Amazing work on our festival posters! The quality and creativity exceeded our expectations. Highly recommended for all digital marketing needs.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">S</div>
+                            <div class="author-info">
+                                <h4>Sanjay Singh</h4>
+                                <p>Shop Owner, Siraha</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <span class="testimonial-quote">"</span>
+                        <p class="testimonial-text">Professional team with excellent communication. They delivered our video editing project on time and the quality was outstanding!</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">R</div>
+                            <div class="author-info">
+                                <h4>Rajesh Kumar</h4>
+                                <p>Restaurant Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials-dots" id="testimonialsDots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-header reveal">
+            <span class="section-tag">Contact Us</span>
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Ready to grow your business? Contact us today for a free consultation!</p>
+        </div>
+        <div class="contact-container reveal">
+            <div class="contact-info">
+                <h3>Let's Grow Your Business Together</h3>
+                <p>Reach out to us for professional digital marketing services. We're here to help your business thrive in the digital world.</p>
+                <ul class="contact-details">
+                    <li class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Phone / WhatsApp</h4>
+                            <p>+977 9815298144</p>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p>ranjankushwaha2072@gmail.com</p>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>Lahan, Siraha, Nepal</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact-form">
+                <h3 class="form-title">Send Us a Message</h3>
+                <form id="contactForm">
+                    <!-- Hidden fields for FormSubmit -->
+                    <input type="hidden" name="_subject" value="New Contact from RRR Digital Agency Website">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Interested In</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="social-media">Social Media Post Design</option>
+                            <option value="video-editing">Video Editing</option>
+                            <option value="facebook-promotion">Facebook Page Promotion</option>
+                            <option value="advertisement">Business Advertisement</option>
+                            <option value="posters">Festival & Offer Posters</option>
+                            <option value="website-design">Website Design & Development</option>
+                            <option value="website-hosting">Website Hosting & Maintenance</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your requirements..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/9779815298144" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>Chat on WhatsApp</span>
+    </a>
+
+    <!-- AI Agent Chat -->
+    <button class="ai-chat-btn" id="aiChatToggle">
+        <i class="fas fa-robot"></i>
+    </button>
+    <div class="ai-chat-modal" id="aiChatModal">
+        <div class="ai-chat-header">
+            <div class="ai-avatar">🤖</div>
+            <div class="ai-name">RK AI Assistant</div>
+            <div class="ai-close" id="aiCloseBtn">&times;</div>
+        </div>
+        <div class="ai-chat-messages" id="aiChatMessages"></div>
+        <div class="ai-chat-input">
+            <input type="text" class="ai-input-field" id="aiInputField" placeholder="Ask me anything about our services...">
+            <button class="ai-send-btn" id="aiSendBtn">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div> 
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>RRR Digital Agency</h3>
+                <p>Professional digital marketing services helping local businesses grow in Lahan, Siraha, and across Nepal.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=61580739655667" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="https://wa.me/9779815298144" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">Social Media Design</a></li>
+                    <li><a href="#services">Video Editing</a></li>
+                    <li><a href="#services">Facebook Promotion</a></li>
+                    <li><a href="#services">Business Ads</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><a href="tel:+9779815298144">+977 9815298144</a></li>
+                    <li><a href="mailto:ranjankushwaha2072@gmail.com">ranjankushwaha2072@gmail.com</a></li>
+                    <li><a href="#">Lahan, Siraha, Nepal</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 RRR Digital Agency. All Rights Reserved. | Designed with ❤️ by RK Digital</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileClose = document.getElementById('mobileClose');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.add('active');
+        });
+
+        mobileClose.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal');
+
+        function reveal() {
+            revealElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', reveal);
+        window.addEventListener('load', reveal);
+
+        // Portfolio Slider
+        const portfolioTrack = document.getElementById('portfolioTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let portfolioIndex = 0;
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        const itemsPerView = window.innerWidth > 992 ? 3 : window.innerWidth > 768 ? 2 : 1;
+        const maxIndex = Math.max(0, portfolioItems.length - itemsPerView);
+
+        function updatePortfolio() {
+            const itemWidth = portfolioItems[0].offsetWidth + 30;
+            portfolioTrack.style.transform = `translateX(-${portfolioIndex * itemWidth}px)`;
+        }
+
+        prevBtn.addEventListener('click', function() {
+            if (portfolioIndex > 0) {
+                portfolioIndex--;
+                updatePortfolio();
+            }
+        });
+
+        nextBtn.addEventListener('click', function() {
+            if (portfolioIndex < maxIndex) {
+                portfolioIndex++;
+                updatePortfolio();
+            }
+        });
+
+        // Auto-slide portfolio
+        setInterval(function() {
+            if (portfolioIndex < maxIndex) {
+                portfolioIndex++;
+            } else {
+                portfolioIndex = 0;
+            }
+            updatePortfolio();
+        }, 5000);
+
+        // Testimonials Slider
+        const testimonialsTrack = document.getElementById('testimonialsTrack');
+        const dots = document.querySelectorAll('.dot');
+        let currentSlide = 0;
+
+        function goToSlide(index) {
+            currentSlide = index;
+            testimonialsTrack.style.transform = `translateX(-${index * 100}%)`;
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                goToSlide(parseInt(this.dataset.index));
+            });
+        });
+
+        // Auto-slide testimonials
+        setInterval(function() {
+            currentSlide = (currentSlide + 1) % 3;
+            goToSlide(currentSlide);
+        }, 5000);
+
+        // Animated Counters
+        const counters = document.querySelectorAll('.feature-number');
+        let countersStarted = false;
+
+        function startCounters() {
+            counters.forEach(counter => {
+                const target = parseInt(counter.dataset.target);
+                const prefix = counter.dataset.prefix || '';
+                const suffix = counter.dataset.suffix || '+';
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+
+                const updateCounter = function() {
+                    current += increment;
+                    if (current < target) {
+                        counter.textContent = prefix + Math.floor(current) + suffix;
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = prefix + target + suffix;
+                    }
+                };
+
+                updateCounter();
+            });
+        }
+
+        // Start counters when section is visible
+        const whyChooseUsSection = document.getElementById('why-choose-us');
+
+        const observerOptions = {
+            threshold: 0.3
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !countersStarted) {
+                    countersStarted = true;
+                    startCounters();
+                }
+            });
+        }, observerOptions);
+
+        observer.observe(whyChooseUsSection);
+
+// Contact Form Submit - Using FormSubmit.co (reliable, no setup needed)
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            const formData = new FormData(this);
+            
+            fetch('https://formsubmit.co/ranjankushwaha2072@gmail.com', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Message sent successfully! We will contact you soon.');
+                    document.getElementById('contactForm').reset();
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(error => {
+                console.error('Error!', error);
+                // Fallback: Open email client
+                const formDataObj = {
+                    name: document.getElementById('name').value,
+                    phone: document.getElementById('phone').value,
+                    email: document.getElementById('email').value,
+                    service: document.getElementById('service').value,
+                    message: document.getElementById('message').value
+                };
+                const mailtoLink = `mailto:ranjankushwaha2072@gmail.com?subject=New Contact from ${formDataObj.name || 'Website'}&body=Name: ${formDataObj.name || ''}%0APhone: ${formDataObj.phone || ''}%0AEmail: ${formDataObj.email || ''}%0AService: ${formDataObj.service || ''}%0A%0AMessage: ${formDataObj.message || ''}`;
+                window.location.href = mailtoLink;
+            })
+            .finally(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // AI Agent Chat Functionality
+        const aiChatToggle = document.getElementById('aiChatToggle');
+        const aiChatModal = document.getElementById('aiChatModal');
+        const aiCloseBtn = document.getElementById('aiCloseBtn');
+        const aiSendBtn = document.getElementById('aiSendBtn');
+        const aiInputField = document.getElementById('aiInputField');
+        const aiChatMessages = document.getElementById('aiChatMessages');
+
+        // AI Responses
+        const aiResponses = {
+            'hello': 'Namaste! 👋 I\'m RK AI Assistant. How can I help you with digital marketing services?',
+            'services': 'We offer: Social Media Posts, Reel Editing, Facebook Promotion, Ads, Festival Posters, Website Design & Hosting. Ask about any specific service!',
+            'pricing': 'Posts: Rs100/post | Reels: Rs200/reel | Packages from Rs500/month. Get your first post FREE! 💎',
+            'contact': 'WhatsApp: +977 9815298144 | Email: ranjankushwaha2072@gmail.com | Lahan, Siraha',
+            'website': 'Professional websites Rs10,000+ hosting. Get leads 24/7!',
+            'reels': 'Instagram Reels edited in 24hrs. Get 10x views with trending effects!',
+            'free': 'First sample post FREE! Message "Free post" on WhatsApp.',
+            'default': 'I\'m here to help! Ask about services, pricing, or say "contact" for details. 😊'
+        };
+
+        // Toggle Chat
+        aiChatToggle.addEventListener('click', () => {
+            aiChatModal.classList.add('active');
+            // Welcome message
+            setTimeout(() => addMessage('ai', 'Hi! Welcome to RK Digital. What digital marketing service interests you? 🤖'), 500);
+        });
+
+        aiCloseBtn.addEventListener('click', () => {
+            aiChatModal.classList.remove('active');
+            aiChatMessages.innerHTML = '';
+        });
+
+        // Send Message
+        aiSendBtn.addEventListener('click', sendAIMessage);
+        aiInputField.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendAIMessage();
+        });
+
+        function sendAIMessage() {
+            const message = aiInputField.value.trim().toLowerCase();
+            if (!message) return;
+
+            addMessage('user', message);
+            aiInputField.value = '';
+
+            // Simulate typing
+            const typingDiv = addTypingIndicator();
+            setTimeout(() => {
+                typingDiv.remove();
+                const response = getAIResponse(message);
+                addMessage('ai', response);
+            }, 1200);
+        }
+
+        function addMessage(sender, text) {
+            const div = document.createElement('div');
+            div.className = `message ${sender}`;
+            div.textContent = text;
+            aiChatMessages.appendChild(div);
+            aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
+        }
+
+        function addTypingIndicator() {
+            const div = document.createElement('div');
+            div.className = 'ai-typing';
+            div.innerHTML = '<div class="typing-dots"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div>';
+            aiChatMessages.appendChild(div);
+            aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
+            return div;
+        }
+
+        function getAIResponse(message) {
+            for (let key in aiResponses) {
+                if (message.includes(key)) return aiResponses[key];
+            }
+            return aiResponses.default;
+        }
+    </script>
+</body>
+</html>

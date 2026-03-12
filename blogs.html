@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RRR Digital Agency Blog | Digital Marketing Tips | Lahan, Nepal</title>
+    <meta name="description" content="Daily digital marketing tips, social media strategies, video editing tutorials from RRR Digital Agency in Lahan, Nepal.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #0066FF;
+            --primary-orange: #FF6B35;
+            --dark-bg: #0a0a0f;
+            --dark-card: #1a1a25;
+            --text-white: #ffffff;
+            --text-gray: #a0a0b0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-white);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,102,255,0.3);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffe;
+        }
+
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 5%;
+        }
+
+        .hero-blog {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, rgba(0,102,255,0.1), rgba(255,107,53,0.1));
+            border-radius: 20px;
+            margin-bottom: 3rem;
+        }
+
+        .hero-blog h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-blog p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .post-card {
+            background: var(--dark-card);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .post-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,102,255,0.2);
+        }
+
+        .post-image {
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: rgba(255,255,255,0.3);
+        }
+
+        .post-content {
+            padding: 2rem;
+        }
+
+        .post-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        .post-date {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .post-category {
+            background: rgba(255,107,53,0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            color: var(--primary-orange);
+        }
+
+        .post-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .post-excerpt {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-blue);
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .read-more:hover {
+            color: var(--primary-orange);
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .page-btn {
+            padding: 0.8rem 1.5rem;
+            background: var(--dark-card);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .page-btn:hover, .page-btn.active {
+            background: var(--primary-blue);
+            border-color: var(--primary-blue);
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            background: var(--dark-card);
+            text-align: center;
+            padding: 2rem 5%;
+            margin-top: 4rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-blog h1 {
+                font-size: 2rem;
+            }
+
+            .posts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="logo">RRR Digital Agency</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/#portfolio">Portfolio</a></li>
+                <li><a href="/blog.html" class="active">Blog</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="hero-blog">
+            <h1>Digital Marketing Blog</h1>
+            <p>Daily tips, strategies, and insights to grow your business online. Latest digital marketing trends and tutorials from Lahan, Nepal.</p>
+        </section>
+
+        <div class="posts-grid">
+            <!-- Blog Post 1 -->
+            <article class="post-card">
+                <div class="post-image">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <div class="post-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>Dec 15, 2024</span>
+                        </div>
+                        <span class="post-category">Social Media</span>
+                    </div>
+                    <h2 class="post-title">5 Instagram Post Ideas That Guarantee Engagement</h2>
+                    <p class="post-excerpt">Discover proven Instagram post templates that local businesses in Lahan can use to boost engagement by 300%. Perfect for shops, restaurants, and service providers.</p>
+                    <a href="blog-post1.html" class="read-more">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog Post 2 --> 
+            <article class="post-card">
+                <div class="post-image">
+                    <i class="fas fa-video"></i>
+                </div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <div class="post-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>Dec 14, 2024</span>
+                        </div>
+                        <span class="post-category">Reels</span>
+                    </div>
+                    <h2 class="post-title">How to Create Viral Reels Under 5 Minutes</h2>
+                    <p class="post-excerpt">Step-by-step Reel editing tutorial using free tools. Get 10x more views for your Lahan business with these simple techniques that anyone can follow.</p>
+                    <a href="blog-post2.html" class="read-more">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog Post 3 --> 
+            <article class="post-card">
+                <div class="post-image">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <div class="post-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>Dec 13, 2024</span>
+                        </div>
+                        <span class="post-category">Facebook Ads</span>
+                    </div>
+                    <h2 class="post-title">Facebook Ad Strategy for Local Businesses (Rs 500 Budget)</h2>
+                    <p class="post-excerpt">Get 50+ customers from Facebook ads with just Rs 500 budget. Complete setup guide for Siraha and Lahan businesses - works for restaurants, shops, services.</p>
+                    <a href="blog-post3.html" class="read-more">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog Post 4 --> 
+            <article class="post-card">
+                <div class="post-image">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <div class="post-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>Dec 12, 2024</span>
+                        </div>
+                        <span class="post-category">Festival</span>
+                    </div>
+                    <h2 class="post-title">Dashain Promotion Poster Templates (Ready to Use)</h2>
+                    <p class="post-excerpt">Download 10 free Dashain poster templates customized for Lahan businesses. Instant download + editing tutorial included.</p>
+                    <a href="blog-post4.html" class="read-more">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog Post 5 --> 
+            <article class="post-card">
+                <div class="post-image">
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <div class="post-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>Dec 11, 2024</span>
+                        </div>
+                        <span class="post-category">Website</span>
+                    </div>
+                    <h2 class="post-title">Why Every Lahan Business Needs a Website in 2025</h2>
+                    <p class="post-excerpt">Complete guide to affordable websites that generate customers 24/7. Hosting + maintenance included for Rs 500/month.</p>
+                    <a href="blog-post5.html" class="read-more">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog Post 6 --> 
+            <article class="post-card">
+                <div class="post-image">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <div class="post-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>Dec 10, 2024</span>
+                        </div>
+                        <span class="post-category">Branding</span>
+                    </div>
+                    <h2 class="post-title">Logo Design Tips for Local Businesses</h2>
+                    <p class="post-excerpt">How to create professional logos that build trust. 5 free tools + design principles every Lahan entrepreneur should know.</p>
+                    <a href="blog-post6.html" class="read-more">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+        </div> 
+
+        <div class="pagination">
+            <a href="#" class="page-btn">← Previous</a>
+            <a href="#" class="page-btn active">1</a>
+            <a href="#" class="page-btn">2</a>
+            <a href="#" class="page-btn">3</a>
+            <a href="#" class="page-btn">Next →</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 RRR Digital Agency Blog | Daily Digital Marketing Tips | Lahan, Siraha, Nepal<br>
+        <a href="/#contact" style="color: var(--primary-blue);">Contact Us</a> | 
+        <a href="https://wa.me/9779815298144" style="color: #25D366;">WhatsApp</a></p>
+    </footer>
+</body>
+</html>
